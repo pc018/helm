@@ -3,12 +3,12 @@ entries:
   bioacoustics:
   - apiVersion: v2
     appVersion: 0.1.26
-    created: "2024-10-28T02:12:51.160497514Z"
+    created: "2024-10-28T02:45:46.355250521Z"
     description: A Helm chart for deploying the Google Bioacoustics Project
     digest: 6b4f918a4eccf1c9d00160345d0ab1e8014b6d2d7ad7ea7a5970dc4a7ab1b72b
     name: bioacoustics
     type: application
     urls:
-    - https://raw.githubusercontent.com/pc018/helm/refs/heads/main/bioacoustics-0.1.26.tgz
+    - https://raw.githubusercontent.com/pc018/helm/main/bioacoustics-0.1.26.tgz
     version: 0.1.26
-generated: "2024-10-28T02:12:51.159935517Z"
+generated: "2024-10-28T02:45:46.354768975Z"
