@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: bioacoustics-embed
-        image: gcr.io/a2o-search-prod/bioacoustics-embed-service:88f9669dc94fa3c79086743e9c20ec40f3eb7552
+        image: {{ .Values.embed.image.repository }}:{{ .Values.embed.image.tag }}
         ports:
         - containerPort: 80
       nodeSelector:

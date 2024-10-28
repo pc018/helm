@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: bioacoustics-api
-        image: gcr.io/a2o-search-prod/bioacoustics-api:latest
+        image: {{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}
         command: ["gunicorn"]
         args: ["--bind", "0.0.0.0:8000", "--access-logfile", "-", "bioacoustics.wsgi:application"]
         env:
@@ -85,7 +85,7 @@ spec:
               key: MINIO_SSL_SUPPORTED
               optional: true
         - name: EMBED_SERVICE_URL
-          value: http://bioacoustics-embed-service/embed
+          value: {{ .Values.config.embedServiceUrl }}
         ports:
         - containerPort: 8000
       nodeSelector:

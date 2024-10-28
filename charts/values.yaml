@@ -1,28 +1,18 @@
-environment: staging
-
 config:
   enable_tls: true
   imagePullSecrets: []
   embedServiceUrl: "http://bioacoustics-embed-service/embed"
 
-env:
-  DB_INSTANCE_NAME: ''
-  DB_INSTANCE_CREDENTIALS_SECRET_NAME: ''
-  PROJECT_ID: ''
-
 embed:
   image:
-    repository: gcr.io/dulcet-clock-385511/bioacoustics-embed-service
+    repository: gcr.io/a2o-search-prod/bioacoustics-embed-service
     tag: 88f9669dc94fa3c79086743e9c20ec40f3eb7552
   host: embed.bioacoustics.ds.io
   nodeSelector: {}
 
 api:
   image:
-    repository: gcr.io/dulcet-clock-385511/bioacoustics-api
-    tag: 11d05d74fdabf4f803e2c36a4f61b7151399939f
+    repository: gcr.io/a2o-search-prod/bioacoustics-api
+    tag: latest
   host: api.bioacoustics.ds.io
   nodeSelector: {}
-
-postgresql:
-  enabled: false
