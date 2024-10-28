@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bioacoustics-embed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bioacoustics-embed
+  template:
+    metadata:
+      labels:
+        app: bioacoustics-embed
+    spec:
+      containers:
+      - name: bioacoustics-embed
+        image: gcr.io/a2o-search-prod/bioacoustics-embed-service:88f9669dc94fa3c79086743e9c20ec40f3eb7552
+        ports:
+        - containerPort: 80
+      nodeSelector:
+      imagePullSecrets:
+      - name: a2o-search-prod-credentials
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bioacoustics-embed-service
+spec:
+  selector:
+    app: bioacoustics-embed
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ClusterIP
