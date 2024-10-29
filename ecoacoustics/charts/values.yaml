@@ -6,7 +6,7 @@ config:
 embed:
   image:
     repository: gcr.io/a2o-search-prod/bioacoustics-embed-service
-    tag: latest
+    tag: 88f9669dc94fa3c79086743e9c20ec40f3eb7552
   host: embed.bioacoustics.ds.io
   nodeSelector: {}
 
