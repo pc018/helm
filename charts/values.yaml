@@ -1,0 +1,18 @@
+config:
+  enable_tls: true
+  imagePullSecrets: []
+  embedServiceUrl: "http://bioacoustics-embed-service/embed"
+
+embed:
+  image:
+    repository: gcr.io/a2o-search-prod/bioacoustics-embed-service
+    tag: 88f9669dc94fa3c79086743e9c20ec40f3eb7552
+  host: embed.bioacoustics.ds.io
+  nodeSelector: {}
+
+api:
+  image:
+    repository: gcr.io/a2o-search-prod/bioacoustics-api
+    tag: latest
+  host: api.bioacoustics.ds.io
+  nodeSelector: {}
