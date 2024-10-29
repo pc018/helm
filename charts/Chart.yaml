@@ -1,6 +1,0 @@
-apiVersion: v2
-name: bioacoustics
-description: A Helm chart for deploying the Google Bioacoustics Project
-type: application
-version: 0.1.26
-appVersion: 0.1.26
